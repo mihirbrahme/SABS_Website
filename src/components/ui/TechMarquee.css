@@ -1,0 +1,47 @@
+.tech-marquee-section {
+    padding: 30px 0;
+    background: white;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+.marquee-container {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.tech-chip {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    /* Light grey */
+    font-family: var(--font-heading);
+    transition: color 0.3s;
+    cursor: default;
+}
+
+.tech-chip:hover {
+    color: var(--color-accent);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+        /* Adjust based on duplication count */
+    }
+}

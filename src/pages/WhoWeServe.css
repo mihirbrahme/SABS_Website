@@ -1,0 +1,44 @@
+.who-segments {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.segment-block {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius-card);
+    border: 1px solid #e2e8f0;
+    box-shadow: var(--shadow-sm);
+}
+
+.segment-block h2 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.segment-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 24px;
+}
+
+.segment-details h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+    .who-segments {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
