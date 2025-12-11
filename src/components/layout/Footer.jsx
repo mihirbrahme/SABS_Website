@@ -21,7 +21,9 @@ const Footer = () => {
                         <ul className="footer-links">
                             <li><Link to="/chartered-accountancy-india">Chartered Accountancy (India)</Link></li>
                             <li><Link to="/global-accounting-bookkeeping">Global Accounting</Link></li>
+                            <li><Link to="/resources/case-study-us-agency">Success Stories</Link></li>
                             <li><Link to="/who-we-serve">Who We Serve</Link></li>
+                            <li><Link to="/resources/nri-property-tax-guide-2025">NRI Tax Guide</Link></li>
                             <li><Link to="/insights">Insights</Link></li>
                         </ul>
                     </div>

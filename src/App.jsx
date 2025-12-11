@@ -9,6 +9,8 @@ import Insights from './pages/Insights';
 import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import NRIPropertyGuide from './pages/resources/NRIPropertyGuide';
+import CaseStudyUSAgency from './pages/resources/CaseStudyUSAgency';
 import './App.css';
 
 function App() {
@@ -25,6 +27,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* Resources */}
+          <Route path="/resources/nri-property-tax-guide-2025" element={<NRIPropertyGuide />} />
+          <Route path="/resources/case-study-us-agency" element={<CaseStudyUSAgency />} />
         </Routes>
       </Layout>
     </Router>

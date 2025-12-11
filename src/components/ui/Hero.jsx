@@ -19,8 +19,8 @@ const Hero = () => {
                         </div>
 
                         <h1>
-                            A Dedicated Offshore Finance Team, <br className="desktop-break" />
-                            Built on 35+ Years of CA Experience.
+                            Chartered Accountants & Offshore Finance Team: <br className="desktop-break" />
+                            Built on 35+ Years of Experience.
                         </h1>
 
                         <p className="hero-subheading">
