@@ -1,47 +1,77 @@
-.tech-marquee-section {
-    padding: 30px 0;
+.tech-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-light);
+    /* Cool Grey */
+    text-align: center;
+}
+
+.tech-header {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.tech-header h2 {
+    font-size: 2rem;
+    margin: 16px 0;
+    color: var(--color-primary);
+}
+
+.tech-header p {
+    color: var(--color-text-main);
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding: 0 24px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Fallback for non-animated row */
+}
+
+/* Pill Box Style for Logos */
+.tech-pill {
     background: white;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    overflow: hidden;
-}
-
-.marquee-container {
-    max-width: 100%;
-    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    box-shadow: var(--shadow-sm);
     white-space: nowrap;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
 }
 
-.marquee-content {
-    display: inline-block;
-    animation: scroll 30s linear infinite;
+/* Certifications */
+.certifications {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
 }
 
-.tech-chip {
-    display: inline-block;
-    padding: 0 40px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #cbd5e1;
-    /* Light grey */
-    font-family: var(--font-heading);
-    transition: color 0.3s;
-    cursor: default;
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
-.tech-chip:hover {
+.cert-icon {
     color: var(--color-accent);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-33.33%);
-        /* Adjust based on duplication count */
-    }
+    font-weight: bold;
 }

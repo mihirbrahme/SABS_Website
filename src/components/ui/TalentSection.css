@@ -1,0 +1,123 @@
+.talent-section {
+    padding: 96px 0;
+    background-color: var(--color-bg-white);
+}
+
+.talent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.talent-content h2 {
+    font-size: 2rem;
+    /* 32px */
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+}
+
+.talent-subheading {
+    font-size: 1.125rem;
+    /* 18px */
+    color: var(--color-text-main);
+    font-style: italic;
+    /* Or simpler weight change */
+    margin-bottom: 24px;
+}
+
+.talent-body {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.roles-list {
+    margin-bottom: 32px;
+}
+
+.role-item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: var(--color-text-main);
+}
+
+.role-item::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    line-height: 1;
+    top: -2px;
+}
+
+.role-item strong {
+    color: var(--color-primary);
+}
+
+.talent-reassurance,
+.timezone-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+    padding: 12px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+}
+
+.icon-check,
+.icon-clock {
+    font-size: 1.2rem;
+}
+
+/* Image */
+.talent-image-wrapper {
+    position: relative;
+}
+
+.talent-img-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    line-height: 0;
+    position: relative;
+}
+
+.talent-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-overlay-caption {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+    .talent-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .talent-image-wrapper {
+        order: 2;
+        /* Image below text on mobile as per design */
+    }
+}

@@ -6,62 +6,65 @@ const Hero = () => {
     return (
         <section className="hero-section">
             <div className="container">
-                <div className="hero-split">
+                <div className="hero-grid">
                     {/* Left Content */}
                     <motion.div
                         className="hero-content"
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <h1>
-                            Elite Offshore <br />
-                            <span className="highlight">Accounting Teams</span>
-                        </h1>
-                        <p>
-                            Scale your finance function with top 1% Indian talent.
-                            We build dedicated offshore teams for growing global brands and CPA firms.
-                            <strong> Zero overhead. US GAAP Experts.</strong>
-                        </p>
-
-                        <div className="hero-actions">
-                            <Link to="/contact" className="btn-primary">Build Your Team</Link>
-                            <Link to="/global-accounting-bookkeeping" className="btn-ghost">View Solutions</Link>
+                        <div className="hero-pill">
+                            Offshore accounting · India-based · Cloud-tool experts
                         </div>
 
-                        <div className="trust-badge">
-                            <div className="trust-avatars">
-                                <div className="trust-avatar" style={{ background: '#cbd5e1' }}></div>
-                                <div className="trust-avatar" style={{ background: '#94a3b8' }}></div>
-                                <div className="trust-avatar" style={{ background: '#64748b' }}></div>
-                            </div>
-                            <span>Trusted by 500+ businesses across US, UK & AU</span>
+                        <h1>
+                            A Dedicated Offshore Finance Team, <br className="desktop-break" />
+                            Built on 35+ Years of CA Experience.
+                        </h1>
+
+                        <p className="hero-subheading">
+                            SABS & CO is your offshore finance and accounting team in India — skilled in tools like QuickBooks Online and Xero, with deep expertise in e-commerce integrations and cloud finance.
+                        </p>
+
+                        <p className="hero-audience">
+                            Designed for <strong>digital and e-commerce businesses</strong>, <strong>CPA firms</strong> and other businesses looking for a dedicated accounting and finance partner.
+                        </p>
+
+                        <div className="hero-actions-container">
+                            <a href="/contact#discovery-call" className="btn-primary" style={{ display: 'inline-block' }}>
+                                Talk to our finance and accounting experts
+                            </a>
+
+                            <p className="hero-secondary-link">
+                                Looking for Chartered Accountancy services in India? <br className="mobile-break" />
+                                <Link to="/chartered-accountancy-india" className="link-arrow-text">View our CA practice</Link>
+                            </p>
                         </div>
                     </motion.div>
 
-                    {/* Right Visual */}
-                    <motion.div
-                        className="hero-visual"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <div className="visual-card image-card">
+                    {/* Right Image */}
+                    <div className="hero-image-wrapper">
+                        <div className="hero-img-card">
                             <img
                                 src="/assets/hero-team.png"
-                                alt="SABS Global Team"
-                                className="hero-image"
+                                alt="SABS Offshore Finance Team"
+                                className="hero-img"
+                                onError={(e) => {
+                                    e.target.onerror = null;
+                                    e.target.src = "https://placehold.co/600x400/f8fafc/0f172a?text=SABS+Team";
+                                }}
                             />
-                            {/* Floating Badge */}
-                            <div className="floating-badge">
-                                <span className="badge-icon">✓</span>
-                                <div>
-                                    <strong>Ready to Deploy</strong>
-                                    <span style={{ display: 'block', fontSize: '0.8rem', color: '#64748b' }}>Senior Accountants Available</span>
+                            {/* Badge */}
+                            <div className="hero-badge bottom-left">
+                                <span className="badge-icon">👥</span>
+                                <div className="badge-text">
+                                    <strong>20-member</strong>
+                                    <span>offshore finance team</span>
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

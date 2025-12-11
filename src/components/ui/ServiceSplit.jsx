@@ -1,50 +1,69 @@
 import { Link } from 'react-router-dom';
-import { Building2, Globe2, ArrowRight } from 'lucide-react';
 import './ServiceSplit.css';
 
 const ServiceSplit = () => {
     return (
         <section className="service-split-section">
             <div className="container">
-                <div className="split-header">
-                    <h2>Two Distinct Practice Areas</h2>
-                    <p>Whether you need a dedicated offshore team or Indian statutory compliance, we bring expert CAs to the table.</p>
+                <div className="section-header center-aligned">
+                    <span className="eyebrow-label">What We Do</span>
+                    <h2>Offshore Accounting at the Core. <br /> CA Expertise in the Background.</h2>
+                    <p className="section-intro">
+                        Our primary focus is to run your finance function as an offshore team.
+                        Underneath that, we remain a full-service Chartered Accountancy firm in India,
+                        so your books are built with controls, compliance and long-term reliability in mind.
+                    </p>
                 </div>
 
-                <div className="split-grid">
-                    {/* Global Team Card (Prioritized) */}
-                    <Link to="/global-accounting-bookkeeping" className="split-card main-split">
-                        <div className="split-icon">
-                            <Globe2 size={32} />
+                <div className="split-cards-grid">
+                    {/* Global Accounting Card - Primary */}
+                    <div className="service-card primary-card">
+                        <div className="card-badge">Primary Service</div>
+                        <div className="card-content">
+                            <h3>Global Accounting & Offshore Bookkeeping</h3>
+                            <p className="card-desc">
+                                We plug into your existing workflows and tools to handle the day-to-day finance backbone — from bookkeeping and reconciliations to month-end close and reporting.
+                            </p>
+
+                            <ul className="check-list orange-check">
+                                <li>End-to-end bookkeeping and reconciliations</li>
+                                <li>E-commerce accounting for Shopify, Amazon and other marketplaces</li>
+                                <li>Cleanup projects and catch-up bookkeeping</li>
+                                <li>White-label bookkeeping support for CPA and accounting firms</li>
+                                <li>Payroll processing support (Gusto, QBO, etc.)</li>
+                                <li>System setup, migration and integrations</li>
+                            </ul>
+
+                            <div className="card-action">
+                                <Link to="/global-accounting-bookkeeping" className="btn-primary full-width">
+                                    Explore Global Accounting Services
+                                </Link>
+                            </div>
                         </div>
-                        <h3>Global Brands & CPA Firms</h3>
-                        <p>Build your dedicated offshore finance team. Save 50% on overheads without compromising on quality.</p>
+                    </div>
 
-                        <div className="service-tags">
-                            <span className="service-tag">Hire Senior Accountants</span>
-                            <span className="service-tag">Virtual CFOs</span>
-                            <span className="service-tag">Payroll Specialists</span>
+                    {/* CA Services Card - Secondary */}
+                    <div className="service-card secondary-card">
+                        <div className="card-content">
+                            <h3>Our Chartered Accountancy Practice in India</h3>
+                            <p className="card-desc">
+                                SABS & CO began as a traditional CA firm in Pune. This legacy practice powers our offshore work — giving you teams that understand controls and compliance.
+                            </p>
+
+                            <ul className="check-list simple-bullet">
+                                <li>Statutory and tax audits for Indian entities</li>
+                                <li>Direct and indirect tax advisory & compliance (GST, TDS)</li>
+                                <li>Information systems and ERP review from a finance perspective</li>
+                                <li>Accounting, MIS and ongoing support for Indian businesses</li>
+                            </ul>
+
+                            <div className="card-action">
+                                <Link to="/chartered-accountancy-india" className="link-arrow-text">
+                                    Learn more about our CA services in India →
+                                </Link>
+                            </div>
                         </div>
-
-                        <span className="split-link">Build Your Team <ArrowRight size={16} /></span>
-                    </Link>
-
-                    {/* India Card */}
-                    <Link to="/chartered-accountancy-india" className="split-card secondary-split">
-                        <div className="split-icon">
-                            <Building2 size={32} />
-                        </div>
-                        <h3>Indian Business Advisory</h3>
-                        <p>Expert CA services for audit, tax, and compliance. Your regulatory shield in India.</p>
-
-                        <div className="service-tags">
-                            <span className="service-tag">Statutory Audit</span>
-                            <span className="service-tag">GST & Tax</span>
-                            <span className="service-tag">Corporate Law</span>
-                        </div>
-
-                        <span className="split-link">Consult Experts <ArrowRight size={16} /></span>
-                    </Link>
+                    </div>
                 </div>
             </div>
         </section>

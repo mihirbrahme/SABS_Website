@@ -1,35 +1,53 @@
-import CountUp from 'react-countup';
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 import './AnimatedStats.css';
 
-const StatItem = ({ end, suffix, label }) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+const StatItem = ({ number, label, suffix = "+", icon }) => {
     return (
-        <div className="stat-item" ref={ref}>
-            <div className="stat-number">
-                {isInView ? <CountUp end={end} duration={2.5} /> : 0}
-                {suffix}
+        <div className="stat-item">
+            <div className="stat-number-wrapper">
+                <span className="stat-number">{number}{suffix}</span>
             </div>
-            <div className="stat-label">{label}</div>
+            <p className="stat-label">{label}</p>
         </div>
     );
 };
 
 const AnimatedStats = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    const stats = [
+        { id: 1, number: "35", label: "Years of Experience" },
+        { id: 2, number: "500", label: "Clients Supported" },
+        { id: 3, number: "5", label: "Countries Served" },
+        { id: 4, number: "20", label: "Member Team" },
+    ];
+
     return (
-        <div className="stats-bar">
+        <section className="stats-section" ref={ref}>
             <div className="container">
+                <div className="stats-header">
+                    <span className="stats-eyebrow">Experience You Can Trust</span>
+                </div>
+
                 <div className="stats-grid">
-                    <StatItem end={10} suffix="+" label="Years Experience" />
-                    <StatItem end={500} suffix="+" label="Clients Served" />
-                    <StatItem end={100} suffix="%" label="Compliance Record" />
-                    <StatItem end={50} suffix="+" label="Team Members" />
+                    {stats.map((stat) => (
+                        <StatItem
+                            key={stat.id}
+                            number={stat.number}
+                            label={stat.label}
+                        />
+                    ))}
+                </div>
+
+                <div className="stats-caption">
+                    <p>
+                        A legacy CA firm that has evolved into a modern offshore finance team — combining long-term trust with today’s tools and workflows.
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
