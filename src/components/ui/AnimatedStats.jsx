@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import './AnimatedStats.css';
 
-const StatItem = ({ number, label, suffix = "+", icon }) => {
+const StatItem = ({ number, label, suffix = "+" }) => {
     return (
         <div className="stat-item">
             <div className="stat-number-wrapper">
@@ -14,9 +14,6 @@ const StatItem = ({ number, label, suffix = "+", icon }) => {
 };
 
 const AnimatedStats = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-
     const stats = [
         { id: 1, number: "35", label: "Years of Experience" },
         { id: 2, number: "500", label: "Clients Supported" },
@@ -25,7 +22,7 @@ const AnimatedStats = () => {
     ];
 
     return (
-        <section className="stats-section" ref={ref}>
+        <section className="stats-section">
             <div className="container">
                 <div className="stats-header">
                     <span className="stats-eyebrow">Experience You Can Trust</span>

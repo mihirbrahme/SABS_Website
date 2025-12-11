@@ -1,3 +1,4 @@
+import SEO from '../components/seo/SEO';
 import CAHero from '../components/ui/CAHero';
 import CAAudience from '../components/ui/CAAudience';
 import CAServices from '../components/ui/CAServices';
@@ -8,6 +9,11 @@ import './CharteredAccountancy.css';
 const CharteredAccountancy = () => {
     return (
         <div className="ca-page">
+            <SEO
+                title="Chartered Accountants in Pune, India | Audit & Tax | SABS & CO"
+                description="Comprehensive Chartered Accountancy services in Pune. Statutory Audit, Tax Compliance, NRI Services, and Business Advisory."
+                canonical="https://sabs-website-three.vercel.app/chartered-accountancy-india"
+            />
             <CAHero />
             <CAAudience />
             <CAServices />

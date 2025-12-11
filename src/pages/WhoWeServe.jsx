@@ -1,3 +1,4 @@
+import SEO from '../components/seo/SEO';
 import WWSHeader from '../components/ui/WWSHeader';
 import WWSSegments from '../components/ui/WWSSegments';
 import CtaSection from '../components/ui/CtaSection';
@@ -6,6 +7,11 @@ import './WhoWeServe.css';
 const WhoWeServe = () => {
     return (
         <div className="who-page">
+            <SEO
+                title="Who We Serve - CA & Offshore Finance Solutions | SABS & CO"
+                description="Tailored financial solutions for Startups, NRIs, Global Agencies, and SME Manufacturers. Discover how we help your specific sector."
+                canonical="https://sabs-website-three.vercel.app/who-we-serve"
+            />
             <WWSHeader />
             <WWSSegments />
             <CtaSection

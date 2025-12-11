@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sabs-website-three.vercel.app/sitemap.xml

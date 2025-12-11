@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/seo/SEO';
 import './Careers.css';
 
 const Careers = () => {
@@ -28,6 +29,11 @@ const Careers = () => {
 
     return (
         <div className="careers-page">
+            <SEO
+                title="Careers at SABS & CO | Join Our Finance Team"
+                description="Explore career opportunities in Audit, Taxation, and Global Cloud Accounting in Pune. Join a tech-forward CA firm."
+                canonical="https://sabs-website-three.vercel.app/careers"
+            />
             <section className="section" style={{ backgroundColor: '#f8fafc' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h1>Careers at SABS & CO</h1>

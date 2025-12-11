@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/seo/SEO';
 import './Insights.css';
 
 const Insights = () => {
@@ -35,6 +36,11 @@ const Insights = () => {
 
     return (
         <div className="insights-page">
+            <SEO
+                title="Accounting & Finance Insights | GST, Cloud Tools, & Compliance | SABS & CO"
+                description="Latest articles on Indian GST compliance, Global Cloud Accounting, and tips for startup founders and CPAs."
+                canonical="https://sabs-website-three.vercel.app/insights"
+            />
             <section className="section" style={{ backgroundColor: '#f8fafc', padding: '80px 0' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h1>Insights & Resources</h1>

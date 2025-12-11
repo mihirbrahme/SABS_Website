@@ -1,3 +1,4 @@
+import SEO from '../components/seo/SEO';
 import AboutHero from '../components/ui/AboutHero';
 import AboutStory from '../components/ui/AboutStory';
 import AboutLeadership from '../components/ui/AboutLeadership';
@@ -8,6 +9,11 @@ import './About.css';
 const About = () => {
     return (
         <div className="about-page">
+            <SEO
+                title="About SABS & CO - Chartered Accountants in Pune"
+                description="We are a team of Chartered Accountants and Financial Experts bridging the gap between Indian compliance and Global efficiency."
+                canonical="https://sabs-website-three.vercel.app/about"
+            />
             <AboutHero />
             <AboutStory />
             <AboutLeadership />

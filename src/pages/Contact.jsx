@@ -1,3 +1,4 @@
+import SEO from '../components/seo/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,6 +9,11 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
+            <SEO
+                title="Contact Us - Schedule a Consultation | SABS & CO"
+                description="Get in touch with SABS & CO for Chartered Accountancy services in India or Global Offshore Finance support. Book a discovery call today."
+                canonical="https://sabs-website-three.vercel.app/contact"
+            />
             <section className="section" style={{ backgroundColor: '#f8fafc' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h1>Get in Touch</h1>

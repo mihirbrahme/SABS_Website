@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import SEO from '../components/seo/SEO';
 import GlobalHero from '../components/ui/GlobalHero';
 import AudienceSegments from '../components/ui/AudienceSegments';
 import ServiceDetailedBlocks from '../components/ui/ServiceDetailedBlocks';
@@ -9,6 +11,11 @@ import './GlobalAccounting.css';
 const GlobalAccounting = () => {
     return (
         <div className="ga-page">
+            <SEO
+                title="Global Cloud Accounting & Bookkeeping Services | SABS & CO"
+                description="Offshore accounting services for US, UK, and Australian firms. We provide white-label bookkeeping, tax preparation, and payroll support."
+                canonical="https://sabs-website-three.vercel.app/global-accounting-bookkeeping"
+            />
             <GlobalHero />
             <AudienceSegments />
             <ServiceDetailedBlocks />
