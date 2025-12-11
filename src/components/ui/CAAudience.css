@@ -1,0 +1,59 @@
+.ca-audience-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-light);
+    /* #f8fafc */
+}
+
+.audience-chip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    justify-content: center;
+}
+
+/* Making the first item (NRIs) span wider or distinct if needed, 
+   but grid auto-fit is robust. Let's keep them uniform or highlight subtly. */
+
+.audience-chip {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.highlight-chip {
+    border-top: 4px solid var(--color-accent);
+    /* Highlight for NRIs */
+}
+
+.audience-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.chip-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.chip-icon {
+    font-size: 1.5rem;
+}
+
+.audience-chip h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.audience-chip p {
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    line-height: 1.5;
+    margin: 0;
+}

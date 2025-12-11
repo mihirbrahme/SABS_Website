@@ -1,0 +1,146 @@
+.service-block {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.service-block.bg-grey {
+    background-color: #f8fafc;
+}
+
+.service-block-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.service-text h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: var(--color-primary);
+}
+
+.block-desc {
+    font-size: 1.125rem;
+    color: var(--color-text-main);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.block-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.block-list h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.outcome-list {
+    list-style: none;
+    padding: 0;
+}
+
+.outcome-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+.outcome-list li::before {
+    content: "→";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+}
+
+.inline-cta {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    padding: 16px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.inline-cta a {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Visualization Placeholders */
+.visual-card {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.visual-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.visual-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    color: var(--color-primary);
+}
+
+.channel-row,
+.firm-box,
+.white-label-box,
+.ledger-box {
+    padding: 12px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+    display: inline-flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+}
+
+.white-label-box,
+.ledger-box {
+    background: var(--color-primary);
+    color: white;
+}
+
+.arrow-down {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+    .service-block-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .block-split {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

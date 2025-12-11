@@ -1,45 +1,4 @@
 /* Chartered Accountancy Page Styles */
-
-/* Hero inherits global styles but we might custom it */
-.ca-hero-bg {
-    background-color: #f8fafc;
-}
-
-/* Service Detail Sections */
-.service-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.service-content h3 {
-    font-size: 1.75rem;
-    margin-bottom: 16px;
-    color: var(--color-primary);
-}
-
-.service-content p {
-    margin-bottom: 24px;
-    color: var(--color-text-main);
-}
-
-.service-list-box {
-    background: white;
-    padding: 32px;
-    border-radius: var(--radius-card);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid #e2e8f0;
-}
-
-.service-list-box h4 {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: var(--color-primary);
-}
-
-@media (min-width: 768px) {
-    .service-detail-grid {
-        grid-template-columns: 1.2fr 0.8fr;
-    }
+.ca-page {
+    /* Main container */
 }

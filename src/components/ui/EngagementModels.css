@@ -1,0 +1,58 @@
+.engagement-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-light);
+    /* #f8fafc */
+}
+
+.engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.engagement-model-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.engagement-model-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-md);
+}
+
+.model-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.engagement-model-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.engagement-model-card p {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.model-detail {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+@media (max-width: 900px) {
+    .engagement-grid {
+        grid-template-columns: 1fr;
+    }
+}

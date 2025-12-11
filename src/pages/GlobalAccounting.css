@@ -1,42 +1,4 @@
-/* Global Accounting Page Styles */
-
-.ga-hero-bg {
-    background-color: #f0f9ff;
-    /* Very light blue */
-}
-
-/* Engagement Models */
-.engagement-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-}
-
-.engagement-card {
-    background: white;
-    padding: 32px;
-    border-radius: var(--radius-card);
-    border: 1px solid #e2e8f0;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.engagement-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.engagement-card h3 {
-    margin-bottom: 16px;
-    color: var(--color-primary);
-}
-
-.engagement-card p {
-    color: var(--color-text-main);
-}
-
-@media (min-width: 768px) {
-    .engagement-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Global Accounting Page Container */
+.ga-page {
+    /* Styles now mostly delegated to components */
 }
